@@ -17,7 +17,7 @@ pipeline:
           runtime:
             type: Cloud
             spec: {}
-          workspace: myvminfrauk
+          workspace: test_myvm_uk
           execution:
             steps:
               - step:
@@ -36,7 +36,7 @@ pipeline:
                   timeout: 10m
               - step:
                   type: IACMTerraformPlugin
-                  name: Destroy
+                  name: Apply
                   identifier: Destroy
                   spec:
                     command: apply
