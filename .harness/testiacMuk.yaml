@@ -29,6 +29,13 @@ pipeline:
                   timeout: 10m
               - step:
                   type: IACMTerraformPlugin
+                  name: Drift-detect
+                  identifier: Driftdetect
+                  spec:
+                    command: detect-drift
+                  timeout: 10m
+              - step:
+                  type: IACMTerraformPlugin
                   name: plan
                   identifier: plan
                   spec:
