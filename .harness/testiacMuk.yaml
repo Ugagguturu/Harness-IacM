@@ -39,6 +39,6 @@ pipeline:
                   name: Destroy
                   identifier: Destroy
                   spec:
-                    command: destroy
+                    command: apply
                   timeout: 10m
         tags: {}
