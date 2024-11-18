@@ -8,7 +8,9 @@ terraform {
     }
   }
 }
+backend "gcs" {
 
+}
 # Provider configuration
 provider "google" {
   project = "dev-bivouac-441702-t4" # Replace with your GCP project ID
