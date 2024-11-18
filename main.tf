@@ -1,5 +1,7 @@
 # Specify the required Terraform version
 terraform {
+  backend "gcs" {
+  }
   required_version = ">= 1.5.0"
   required_providers {
     google = {
@@ -7,9 +9,6 @@ terraform {
       version = "~> 4.85" # Use the latest stable version
     }
   }
-}
-backend "gcs" {
-
 }
 # Provider configuration
 provider "google" {
