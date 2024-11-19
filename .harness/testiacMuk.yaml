@@ -47,6 +47,6 @@ pipeline:
                   identifier: apply
                   spec:
                     command: apply
-                  skipCondition: <+codebase.branch != 'main'>
+                  skipCondition: <+pipeline.branch =! 'main'>
                   timeout: 10m
         tags: {}
