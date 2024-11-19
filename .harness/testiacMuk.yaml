@@ -49,4 +49,7 @@ pipeline:
                     command: apply
                   skipCondition: <+pipeline.branch =! 'main'>
                   timeout: 10m
+                  when:
+                    stageStatus: Success
+                    condition: <+pipeline.branch == 'main'>
         tags: {}
