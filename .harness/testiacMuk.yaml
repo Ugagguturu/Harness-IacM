@@ -40,5 +40,6 @@ pipeline:
                   identifier: Destroy
                   spec:
                     command: apply
+                  skipCondition: <+execution.trigger.git.pipeline.branch != 'main'>
                   timeout: 10m
         tags: {}
