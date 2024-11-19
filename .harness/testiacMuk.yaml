@@ -48,6 +48,9 @@ pipeline:
                     command: |-
                       echo "Branch: <+pipeline.variables.branch>"
                       echo "Branch from trigger: <+execution.trigger.git.branch>"
+                      echo "Trigger Branch: <+trigger.branch>"
+                      echo "Trigger Event: <+trigger.event>"
+                      echo "Full Trigger Context: <+trigger>"
               - step:
                   type: IACMTerraformPlugin
                   name: Apply
