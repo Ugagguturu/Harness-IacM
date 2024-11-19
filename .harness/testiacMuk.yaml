@@ -37,7 +37,7 @@ pipeline:
               - step:
                   type: IACMTerraformPlugin
                   name: Apply
-                  identifier: Destroy
+                  identifier: apply
                   spec:
                     command: apply
                   skipCondition: <+execution.trigger.git.pipeline.branch != 'main'>
