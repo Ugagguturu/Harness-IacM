@@ -47,7 +47,6 @@ pipeline:
                   identifier: apply
                   spec:
                     command: apply
-                  skipCondition: <+pipeline.branch =! 'main'>
                   timeout: 10m
                   when:
                     stageStatus: Success
