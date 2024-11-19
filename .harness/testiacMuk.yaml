@@ -29,18 +29,18 @@ pipeline:
                   timeout: 10m
               - step:
                   type: IACMTerraformPlugin
+                  name: Validate
+                  identifier: Validate
+                  spec:
+                    command: validate
+                  timeout: 10m
+              - step:
+                  type: IACMTerraformPlugin
                   name: plan
                   identifier: plan
                   spec:
                     command: plan
                   timeout: 10m
-              - step:
-                  type: Run
-                  name: Debug Branch
-                  identifier: Debug_Branch
-                  spec:
-                    shell: Sh
-                    command: "echo \"Branch: <+pipeline.branch>\""
               - step:
                   type: IACMTerraformPlugin
                   name: Apply
