@@ -51,5 +51,5 @@ pipeline:
                   timeout: 10m
                   when:
                     stageStatus: Success
-                    condition: <+pipeline.branch == 'main'>
+                    condition: <+pipeline.branch> == "main"
         tags: {}
