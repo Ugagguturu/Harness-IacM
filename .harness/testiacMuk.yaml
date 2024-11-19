@@ -3,11 +3,6 @@ pipeline:
   identifier: testiacMuk
   projectIdentifier: ORCA_onedev
   orgIdentifier: default
-  variables:
-    - name: branch
-      type: String
-      default: main
-      value: main
   tags: {}
   stages:
     - stage:
@@ -45,13 +40,13 @@ pipeline:
                   identifier: Debug_Branch
                   spec:
                     shell: Sh
-                    command: "echo \"Branch: <+pipeline.variables.branch>\""
+                    command: "echo \"Branch: <+codebase.branch>\""
               - step:
                   type: IACMTerraformPlugin
                   name: Apply
                   identifier: apply
                   spec:
                     command: apply
-                  skipCondition: <+pipeline.variables.branch != 'main'>
+                  skipCondition: <+codebase.branch != 'main'>
                   timeout: 10m
         tags: {}
