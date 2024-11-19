@@ -35,11 +35,18 @@ pipeline:
                     command: plan
                   timeout: 10m
               - step:
+                  type: Run
+                  name: Debug Branch
+                  identifier: Debug_Branch
+                  spec:
+                    shell: Sh
+                    command: "echo \"Branch: <+pipeline.branch>\""
+              - step:
                   type: IACMTerraformPlugin
                   name: Apply
                   identifier: apply
                   spec:
                     command: apply
-                  skipCondition: <+execution.trigger.git.pipeline.branch != 'main'>
+                  skipCondition: <+pipeline.branch =! 'main'>
                   timeout: 10m
         tags: {}
