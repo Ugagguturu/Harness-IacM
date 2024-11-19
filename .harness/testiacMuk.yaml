@@ -40,7 +40,7 @@ pipeline:
                   identifier: Debug_Branch
                   spec:
                     shell: Sh
-                    command: "echo \"Branch: <+codebase.branch>\""
+                    command: "echo \"Branch: <+pipeline.branch>\""
               - step:
                   type: IACMTerraformPlugin
                   name: Apply
