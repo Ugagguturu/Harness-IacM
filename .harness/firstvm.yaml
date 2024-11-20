@@ -1,5 +1,6 @@
 inputSet:
   name: first-vm
+  tags: {}
   identifier: firstvm
   orgIdentifier: default
   projectIdentifier: ORCA_onedev
@@ -19,3 +20,6 @@ inputSet:
             - name: instance_type
               type: String
               value: e2-standard
+            - name: zone
+              type: String
+              value: us-east1-c
