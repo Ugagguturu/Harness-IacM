@@ -68,3 +68,8 @@ pipeline:
             description: ""
             required: false
             value: <+input>
+          - name: zone
+            type: String
+            description: ""
+            required: false
+            value: <+input>
