@@ -52,3 +52,19 @@ pipeline:
                     stageStatus: Success
                     condition: <+pipeline.branch> == "main"
         tags: {}
+        variables:
+          - name: instance_name
+            type: String
+            description: ""
+            required: true
+            value: <+input>
+          - name: region
+            type: String
+            description: ""
+            required: false
+            value: <+input>
+          - name: instance_type
+            type: String
+            description: ""
+            required: false
+            value: <+input>
