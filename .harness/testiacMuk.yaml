@@ -53,7 +53,7 @@ pipeline:
                     condition: <+pipeline.branch> == "main"
         tags: {}
         variables:
-          - name: instance_name
+          - name: vm_name
             type: String
             description: ""
             required: true
@@ -63,7 +63,7 @@ pipeline:
             description: ""
             required: false
             value: <+input>
-          - name: instance_type
+          - name: machine_type
             type: String
             description: ""
             required: false
