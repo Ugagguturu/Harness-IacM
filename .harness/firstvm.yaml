@@ -1,0 +1,21 @@
+inputSet:
+  name: first-vm
+  identifier: firstvm
+  orgIdentifier: default
+  projectIdentifier: ORCA_onedev
+  pipeline:
+    identifier: testiacMuk
+    stages:
+      - stage:
+          identifier: iactfstage
+          type: IACM
+          variables:
+            - name: instance_name
+              type: String
+              value: first-harness-server
+            - name: region
+              type: String
+              value: us-east1
+            - name: instance_type
+              type: String
+              value: e2-standard
