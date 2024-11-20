@@ -19,7 +19,7 @@ inputSet:
               value: us-east1
             - name: instance_type
               type: String
-              value: e2-standard
+              value: n2-standard-2
             - name: zone
               type: String
               value: us-east1-c
