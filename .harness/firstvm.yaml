@@ -19,7 +19,7 @@ inputSet:
               value: us-east1
             - name: machine_type
               type: String
-              value: n2-standard-4
+              value: e2-small
             - name: zone
               type: String
               value: us-east1-c
