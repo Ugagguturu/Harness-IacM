@@ -56,7 +56,7 @@ pipeline:
           - name: vm_name
             type: String
             description: ""
-            required: true
+            required: false
             value: <+input>
           - name: region
             type: String
