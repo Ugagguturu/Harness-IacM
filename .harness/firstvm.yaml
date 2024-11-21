@@ -11,15 +11,15 @@ inputSet:
           identifier: iactfstage
           type: IACM
           variables:
-            - name: instance_name
+            - name: vm_name
               type: String
-              value: first-harness-server
+              value: first-vm
             - name: region
               type: String
               value: us-east1
-            - name: instance_type
+            - name: machine_type
               type: String
-              value: n2-standard-2
+              value: n2-standard-4
             - name: zone
               type: String
               value: us-east1-c
