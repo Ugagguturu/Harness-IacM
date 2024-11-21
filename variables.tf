@@ -11,6 +11,7 @@ variable "region" {
 variable "zone" {
   description = "The GCP zone"
   type        = string
+  default     = "us-east1-c"
 }
 
 variable "vm_name" {
