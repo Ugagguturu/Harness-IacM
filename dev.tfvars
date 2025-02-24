@@ -1,4 +1,4 @@
-project       = "dev-bivouac-441702-t4"        # Replace with your GCP project ID
+project       = "hopeful-lexicon-449405-b6"        # Replace with your GCP project ID
 region        = "us-east1"                     # Replace with your desired region
 zone          = "us-east1-c"                   # Replace with your desired zone
 vm_name       = "harness-server"                   # Replace with your desired VM name
